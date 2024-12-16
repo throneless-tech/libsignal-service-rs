@@ -8,7 +8,7 @@ use crate::push_service::DEFAULT_DEVICE_ID;
 /// This is additional functions required to handle
 /// session deletion. It might be a candidate for inclusion into
 /// the bigger `SessionStore` trait.
-#[async_trait(?Send)]
+#[async_trait]
 pub trait SessionStoreExt: SessionStore {
     /// Get the IDs of all known sub devices with active sessions for a recipient.
     ///
