@@ -16,7 +16,7 @@ use rand::{CryptoRng, Rng};
 use serde::{Deserialize, Serialize};
 use tracing::Instrument;
 
-#[async_trait(?Send)]
+#[async_trait]
 /// Additional methods for the Kyber pre key store
 ///
 /// Analogue of Android's ServiceKyberPreKeyStore
@@ -53,7 +53,7 @@ pub trait KyberPreKeyStoreExt: KyberPreKeyStore {
 /// Stores the ID of keys published ahead of time
 ///
 /// <https://signal.org/docs/specifications/x3dh/>
-#[async_trait(?Send)]
+#[async_trait]
 pub trait PreKeysStore:
     PreKeyStore
     + IdentityKeyStore
